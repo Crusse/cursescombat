@@ -1,14 +1,8 @@
-
-#define _XOPEN_SOURCE_EXTENDED
-
-#include <ncursesw/curses.h>
-#include <iostream>
+#include "CursesRenderer.hpp"
 
 int main( int argc, char* argv[] ) {
 
-  setlocale( LC_ALL, "" );
-
-
+  CursesRenderer renderer;
 
   return 0;
 }
