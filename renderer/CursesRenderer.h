@@ -5,7 +5,11 @@ class CursesRenderer : public Renderer {
 
 public:
   CursesRenderer();
-  void draw( const Map & );
+  void draw( const Map& );
   ~CursesRenderer();
+
+private:
+  int winW;
+  int winH;
 };
 

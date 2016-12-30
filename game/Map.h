@@ -3,11 +3,16 @@
 
 #include <vector>
 #include "Tile.h"
+#include "Entity.h"
 
 class Map {
 
-  std::vector<Tile> tiles;
+public:
+  Map( std::vector<Tile> tileList, std::vector<Entities> entityList );
 
+private:
+  std::vector<Tile> tiles;
+  std::vector<Entity> entities;
 };
 
 #endif // _CCO_MAP_H_

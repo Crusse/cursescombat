@@ -5,7 +5,9 @@
  * Each Tile covers an area of 5*5 meters of the game map (same as the original
  * Close Combat games).
  */
-struct Tile {
+class Tile {
+
+public:
 
   // In meters
   double height = 0;
@@ -19,56 +21,58 @@ struct Tile {
   /**
    * The semantics of this depend on the tile type. Usually this means
    * destroying a wall or flattening a bush.
+   *
+   * Returns whether clearing the tile succeeded.
    */
-  void clear();
+  bool clear();
 };
 
-struct GrassTile : Tile {
+class GrassTile : Tile {
 
   
 };
 
-struct RoadTile : Tile {
+class RoadTile : Tile {
 
   
 };
 
-struct BushTile : Tile {
+class BushTile : Tile {
 
   
 };
 
-struct TreeTrunkTile : Tile {
+class TreeTrunkTile : Tile {
 
   
 };
 
-struct RubbleTile : Tile {
+class RubbleTile : Tile {
 
   
 };
 
-struct RockTile : Tile {
+class RockTile : Tile {
 
   
 };
 
-struct HouseInteriorTile : Tile {
+class HouseInteriorTile : Tile {
 
   
 };
 
-struct BrickWallTile : Tile {
+class BrickWallTile : Tile {
 
   
 };
 
-struct WoodWallTile : Tile {
+class WoodWallTile : Tile {
 
   
 };
 
-struct TrenchTile : Tile {
+class TrenchTile : Tile {
 
   
 };

@@ -20,7 +20,23 @@ CursesRenderer::CursesRenderer() {
   clear();
 }
 
+void refreshWindowDimensions() {
+  
+  int startX = 0;
+  int startY = 0;
+  int maxX = 0;
+  int maxY = 0;
+
+  getbegyx( stdscr, startY, startX );
+  getmaxyx( stdscr, maxY, maxX );
+
+  winW = maxX - startX;
+  winH = maxY - startY;
+}
+
 void CursesRenderer::draw( const Map &map ) {
+
+  refreshWindowDimensions();  
 
   move( 10, 10 );
   addwstr( L"Char: " );

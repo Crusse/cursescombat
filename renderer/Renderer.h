@@ -6,7 +6,7 @@
 class Renderer {
 
 public:
-  void draw( const Map & );
+  void draw( const Map& );
 };
 
 #endif // _CCO_RENDERER_H_
