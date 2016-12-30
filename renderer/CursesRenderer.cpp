@@ -2,7 +2,9 @@
 #include <clocale>
 #include <string>
 #include <bitset>
-#include "CursesRenderer.hpp"
+
+#include "CursesRenderer.h"
+#include "../game/Map.h"
 
 CursesRenderer::CursesRenderer() {
 
@@ -16,11 +18,15 @@ CursesRenderer::CursesRenderer() {
   keypad( stdscr, true );
   curs_set( 0 );
   clear();
+}
+
+void CursesRenderer::draw( const Map &map ) {
 
   move( 10, 10 );
   addwstr( L"Char: " );
 
   wint_t ch;
+  // Wait for input
   get_wch( &ch );
   wchar_t wch = ch;
   const cchar_t cch = { A_BOLD, wch };
@@ -31,9 +37,6 @@ CursesRenderer::CursesRenderer() {
   addstr( ")" );
 
   refresh();
-
-  // Wait for input
-  get_wch( &ch );
 }
 
 CursesRenderer::~CursesRenderer() {

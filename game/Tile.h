@@ -1,11 +1,11 @@
-#ifndef TILE_H
-#define TILE_H
+#ifndef _CCO_TILE_H_
+#define _CCO_TILE_H_
 
 /**
  * Each Tile covers an area of 5*5 meters of the game map (same as the original
  * Close Combat games).
  */
-class Tile {
+struct Tile {
 
   // In meters
   double height = 0;
@@ -23,54 +23,55 @@ class Tile {
   void clear();
 };
 
-class GrassTile : Tile {
+struct GrassTile : Tile {
 
   
 };
 
-class RoadTile : Tile {
+struct RoadTile : Tile {
 
   
 };
 
-class BushTile : Tile {
+struct BushTile : Tile {
 
   
 };
 
-class TreeTrunkTile : Tile {
+struct TreeTrunkTile : Tile {
 
   
 };
 
-class RubbleTile : Tile {
+struct RubbleTile : Tile {
 
   
 };
 
-class RockTile : Tile {
+struct RockTile : Tile {
 
   
 };
 
-class HouseInteriorTile : Tile {
+struct HouseInteriorTile : Tile {
 
   
 };
 
-class BrickWallTile : Tile {
+struct BrickWallTile : Tile {
 
   
 };
 
-class WoodWallTile : Tile {
+struct WoodWallTile : Tile {
 
   
 };
 
-class TrenchTile : Tile {
+struct TrenchTile : Tile {
 
   
 };
 
-#endif // TILE_H
+#endif // _CCO_TILE_H_
+
