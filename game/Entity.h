@@ -12,6 +12,10 @@ public:
   double width; // if heading == 0, this is along map x coord
   double length; // if heading == 0, this is along map y coord
   double height; // if heading == 0, this is along map z coord
+  // Location, meters in map coordinates
+  double x;
+  double y;
+  double z;
   // Degrees, 0 is up
   double heading;
   // Kilometers per hour
